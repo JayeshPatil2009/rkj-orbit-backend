@@ -24,6 +24,7 @@ app.post("/chat", async (req, res) => {
 
     const data = await response.json();
     res.json(data);
+
   } catch (error) {
     res.status(500).json({ error: "API call failed", details: error.message });
   }
@@ -32,3 +33,27 @@ app.post("/chat", async (req, res) => {
 // ✅ FIXED: Let Render assign the port
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.post("/chat", async (req, res) => {
+  const { messages, model } = req.body;
+
+  console.log("Received request:", { messages, model }); // log incoming
+
+  try {
+    const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${API_KEY}`,
+      },
+      body: JSON.stringify({ model, messages }),
+    });
+
+    const data = await response.json();
+    console.log("OpenRouter response:", data); // log outgoing
+
+    res.json(data);
+  } catch (error) {
+    console.error("API Error:", error.message);
+    res.status(500).json({ error: "API call failed", details: error.message });
+  }
+});
