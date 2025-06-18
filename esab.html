@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ESAB Welding Machines</title>
+  <style>
+    body { font-family:'Segoe UI',sans-serif; margin:0; background:#f5f9ff; color:#222; }
+    header { background:#003366; color:#fff; padding:1rem; display:flex; align-items:center; }
+    .menu-icon { font-size:1.5rem; cursor:pointer; margin-right:1rem; }
+    .site-title { font-size:1.5rem; }
+    .sidebar { position:fixed; top:0; left:-250px; width:250px; height:100%; background:#0055aa; color:#fff; padding-top:3rem; transition:.3s; z-index:1000; }
+    .sidebar a { display:block; padding:1rem 2rem; color:#fff; text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.1); }
+    .sidebar a:hover { background:#003f80; }
+    .overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.3); z-index:900; display:none; }
+    .section { padding:2rem; }
+    .category { margin-bottom:3rem; }
+    .category h2 { color:#003366; border-bottom:3px solid #003366; display:inline-block; padding-bottom:5px; margin-bottom:1.5rem; border-radius:5px; }
+    .products { display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:flex-start; }
+    .product { background:#fff; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.08); padding:15px; width:250px; text-align:center; transition:.3s; }
+    .product:hover { transform:translateY(-5px); }
+    .product img { width:100%; height:180px; object-fit:contain; border-radius:8px; background:white; }
+    .product h3 { font-size:18px; color:#004aad; margin:10px 0 5px; }
+    .product p { font-size:14px; color:#333; }
+    footer { background:#003366; color:#fff; text-align:center; padding:1rem; border-top-left-radius:30px; border-top-right-radius:30px; margin-top:4rem; }
+    @media(max-width:768px){ .products{flex-direction:column; align-items:center; } }
+  </style>
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  
+  <a href="contact.html">Contact</a>
+</div>
+<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+<header>
+  <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+  <div class="site-title">ESAB Welding Machines</div>
+</header>
+
+<div class="section">
+
+  <!-- Machines -->
+  <div class="category">
+    <h2>Welding Machines</h2>
+    <div class="products">
+
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61qz9c1IBhL._UF1000,1000_QL80_FMwebp_.jpg" alt="ARC 200i">
+        <h3>ARC 200i</h3><p>Portable IGBT MMA Welder with 200A output.</p>
+      </div>
+      <div class="product">
+        <img src="https://static1.industrybuying.com/products/welding/welding-machine/arc-welding-machine/WEL.ARC.28068206_1677565203914.webp" alt="ARC 400i">
+        <h3>ARC 400i</h3><p>400A MMA inverter for continuous welding.</p>
+      </div>
+      <div class="product">
+        <img src="https://5.imimg.com/data5/QX/NR/DV/SELLER-5565385/arc-630i-welding-machine-500x500.jpg" alt="ARC 601i">
+        <h3>ARC 601i</h3><p>600A industrial MMA inverter with high duty.</p>
+      </div>
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2021/6/FT/ZN/OI/101258509/esab-buddy-mig-400i-500x500.png" alt="Buddy MIG 400i">
+        <h3>Buddy™ MIG 400i</h3><p>Heavy-duty MIG/MAG inverter for industry.</p>
+      </div>
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2021/1/TM/AH/NK/62074446/esab-buddy-mig-500i-500x500.png" alt="Buddy MIG 500i">
+        <h3>Buddy™ MIG 500i</h3><p>500A high-performance MIG/MAG unit.</p>
+      </div>
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/11/357780265/JA/ZW/JR/516869/esab-auto-k-400-mig-welding-machine-60-400a-500x500.png" alt="Auto K 400">
+        <h3>Auto K 400</h3><p>Thyristor MIG with digital control panel.</p>
+      </div>
+      <div class="product">
+        <img src="https://cpimg.tistatic.com/10035092/b/4/AUTO-K-600..jpg" alt="Auto K 600">
+        <h3>Auto K 600</h3><p>600A thyristor MIG with stick out control.</p>
+      </div>
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/12/476592683/UO/ZC/HO/516869/esab-rogue-es-251i-500x500.jpg" alt="Rogue ES 251i">
+        <h3>Rogue ES 251i</h3><p>251A compact MMA inverter with VRD.</p>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71KumFjAXNS.jpg" alt="Rogue ET 200iP">
+        <h3>Rogue ET 200iP</h3><p>Pulse TIG & MMA with HF Start & lift arc.</p>
+      </div>
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/5/419163818/JX/KW/HC/516869/esab-mig-500i-welding-machine-500x500.jpg" alt="MIG 502i">
+        <h3>MIG 502i</h3><p>Digital MIG/MAG with memory and dual panel.</p>
+      </div>
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/2/391466368/BR/HD/DX/7926537/esab-mig-welding-machine-400i-cccv-500x500.jpg" alt="MIG 400i CCCV">
+        <h3>MIG 400i CCCV</h3><p>Multi-process MIG + MMA inverter machine.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Accessories -->
+  <div class="category">
+    <h2>Accessories & Wire Feeders</h2>
+    <div class="products">
+
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2021/6/EN/JZ/NT/129310812/esab-buddy-mig-500i-500x500-500x500.jpg" alt="Buddy Feed 402">
+        <h3>Buddy™ Feed 402</h3><p>1.5–20 m/min wire feeder for Buddy MIG.</p>
+      </div>
+      <div class="product">
+        <img src="https://static1.industrybuying.com/products/welding/welding-machine/mig-welding-machine/WEL.MIG.48067930_1680701258979.webp" alt="Servo I">
+        <h3>Servo I</h3><p>DC wire feeder for precision MIG systems.</p>
+      </div>
+      <div class="product">
+        <img src="https://4.imimg.com/data4/LV/CK/ETO-4412189/wire-feeder-servo-i-500x500.jpg" alt="Servo II">
+        <h3>Servo II</h3><p>Feeder with torch compatibility for 1.6mm wire.</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer>&copy; 2025 Welding Machine Dealer. All rights reserved.</footer>
+
+<script>
+  function toggleSidebar() {
+    const sb = document.getElementById('sidebar');
+    const ov = document.getElementById('overlay');
+    if (sb.style.left === '0px') {
+      sb.style.left = '-250px'; ov.style.display = 'none';
+    } else {
+      sb.style.left = '0px'; ov.style.display = 'block';
+    }
+  }
+  function closeSidebar() {
+    document.getElementById('sidebar').style.left = '-250px';
+    document.getElementById('overlay').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

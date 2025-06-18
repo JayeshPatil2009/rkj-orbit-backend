@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Great Yuva Welding Machines</title>
+  <style>
+    body { font-family:'Segoe UI',sans-serif; margin:0; background:#f5f9ff; color:#222; }
+    header { background:#003366; color:#fff; padding:1rem; display:flex; align-items:center; }
+    .menu-icon { font-size:1.5rem; cursor:pointer; margin-right:1rem; }
+    .site-title { font-size:1.5rem; }
+    .sidebar { position:fixed; top:0; left:-250px; width:250px; height:100%; background:#0055aa; color:#fff; padding-top:3rem; transition:.3s; z-index:1000; }
+    .sidebar a { display:block; padding:1rem 2rem; color:#fff; text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.1); }
+    .sidebar a:hover { background:#003f80; }
+    .overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.3); z-index:900; display:none; }
+    .section { padding:2rem; }
+    .category { margin-bottom:3rem; }
+    .category h2 { color:#003366; border-bottom:3px solid #003366; display:inline-block; padding-bottom:5px; margin-bottom:1.5rem; border-radius:5px; }
+    .products { display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:flex-start; }
+    .product { background:#fff; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.08); padding:15px; width:250px; text-align:center; transition:.3s; }
+    .product:hover { transform:translateY(-5px); }
+    .product img { width:100%; height:180px; object-fit:contain; border-radius:8px; background:white; }
+    .product h3 { font-size:18px; color:#004aad; margin:10px 0 5px; }
+    .product p { font-size:14px; color:#333; }
+    footer { background:#003366; color:#fff; text-align:center; padding:1rem; border-top-left-radius:30px; border-top-right-radius:30px; margin-top:4rem; }
+    @media(max-width:768px){ .products{flex-direction:column; align-items:center; } }
+  </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  
+  <a href="contact.html">Contact</a>
+</div>
+<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+<!-- Header -->
+<header>
+  <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+  <div class="site-title">Great Yuva Welding Machines</div>
+</header>
+
+<!-- Main Section -->
+<div class="section">
+
+  <!-- MIG / MMA -->
+  <div class="category">
+    <h2>MIG / MMA Machines</h2>
+    <div class="products">
+      <div class="product"><img src="https://5.imimg.com/data5/SELLER/Default/2022/5/UN/RG/HP/1426669/yuva-400-mig-welding-500x500.jpeg" alt="YUVA-MIG-400"><h3>YUVA-MIG-400</h3><p>Dual IGBT MIG with 4-roll feeder.</p></div>
+      <div class="product"><img src="https://5.imimg.com/data5/SELLER/Default/2020/10/HI/SR/EY/68250066/y-300t-500x500.png" alt="YUVA-MIG-300T"><h3>YUVA-MIG-300T</h3><p>K-Series inverter MIG machine.</p></div>
+      <div class="product"><img src="https://5.imimg.com/data5/SELLER/Default/2022/11/WC/WH/YS/30311813/new-product-500x500.jpeg" alt="YMIG-270PR"><h3>YMIG-270PR</h3><p>MIG/MMA dual output welder.</p></div>
+      <div class="product"><img src="https://5.imimg.com/data5/SELLER/Default/2023/7/327753931/HV/JK/RY/21193024/grat-yuva-ymig-600pr-500x500.jpg" alt="YMIG-600PR"><h3>YMIG-600PR</h3><p>600A MIG/MMA system with synergy.</p></div>
+      <div class="product"><img src="https://5.imimg.com/data5/SELLER/Default/2021/8/QJ/FP/WO/30311813/great-yuva-500-inverter-arc-welding-machine-20-500a-500x500.png" alt="YUVA-DP500PR"><h3>YUVA-DP500PR</h3><p>Double pulse inverter MIG.</p></div>
+      <div class="product"><img src="https://static1.industrybuying.com/products/welding/welding-machine/mig-welding-machine/WEL.MIG.520233816_1689332985658.webp" alt="YMIG-400"><h3>YMIG-400</h3><p>Crater fill, MIG inverter system.</p></div>
+    </div>
+  </div>
+
+  <!-- TIG / MMA -->
+  <div class="category">
+    <h2>TIG / MMA Machines</h2>
+    <div class="products">
+      <div class="product"><img src="https://rukminid2.flixcart.com/image/1100/1300/ktuewsw0/welding-machine/e/0/u/ytig-251-great-yuva-original-imag73nxgvghwvgs.jpeg?q=20&crop=false" alt="YTIG-251"><h3>YTIG-251</h3><p>K-series TIG/MMA system.</p></div>
+      <div class="product"><img src="https://5.imimg.com/data5/IOS/Default/2023/1/FQ/RY/EZ/30311813/product-jpeg-500x500.png" alt="TIG-315P"><h3>TIG-315P</h3><p>Pulse TIG AC/DC inverter.</p></div>
+      
+      <div class="product"><img src="https://5.imimg.com/data5/SELLER/Default/2023/3/294472099/WO/VK/AP/10550425/great-yuva-200-waterproof-welding-machine-500x500.jpg" alt="YUVA-200NW"><h3>YUVA-200NW</h3><p>Waterproof MMA inverter 200A.</p></div>
+      <div class="product"><img src="https://5.imimg.com/data5/SELLER/Default/2023/12/365629971/XC/TN/IF/75336779/wel-arc-18175487-1-500x500.jpg" alt="YUVA-300"><h3>YUVA-300</h3><p>300A MMA machine for site use.</p></div>
+      <div class="product"><img src="https://5.imimg.com/data5/SELLER/Default/2021/8/JJ/SK/NI/30311813/inverter-arc-welding-machine-500x500.png" alt="YUVA-400PR"><h3>YUVA-400PR</h3><p>Remote-control MMA inverter.</p></div>
+      <div class="product"><img src="https://5.imimg.com/data5/SELLER/Default/2021/8/QJ/FP/WO/30311813/great-yuva-500-inverter-arc-welding-machine-20-500a-500x500.png" alt="YUVA-500PR"><h3>YUVA-500PR</h3><p>500A MMA with remote panel.</p></div>
+      <div class="product"><img src="https://5.imimg.com/data5/SELLER/Default/2023/1/AP/SH/ZW/30311813/great-yuva-630-pr-500x500.png" alt="YUVA-630PR"><h3>YUVA-630PR</h3><p>Heavy-duty MMA welder.</p></div>
+      <div class="product"><img src="https://5.imimg.com/data5/SELLER/Default/2020/10/WG/SZ/FN/68250066/yuva-sw1250pr-500x500.png" alt="SW1250PR"><h3>YUVA-SW1250PR</h3><p>Submerged ARC Welding inverter.</p></div>
+    </div>
+  </div>
+
+  <!-- Plasma / SAW / Others -->
+  <div class="category">
+    <h2>Plasma & SAW Machines</h2>
+    <div class="products">
+      <div class="product"><img src="https://5.imimg.com/data5/AK/OB/PJ/SELLER-46931258/plasma-cutting-machine-y-cut-101-250x250.jpg" alt="YCUT-101"><h3>YCUT-101</h3><p>100A air plasma cutter.</p></div>
+      <div class="product"><img src="https://5.imimg.com/data5/SELLER/Default/2023/1/GW/ZE/YE/30311813/great-yuva-cut-101-500x500.jpg" alt="YCUT-101PR"><h3>YCUT-101PR</h3><p>CNC interface plasma model.</p></div>
+      <div class="product"><img src="https://5.imimg.com/data5/SELLER/Default/2022/11/EM/BB/DP/30311813/new-product-500x500.jpeg" alt="YCUT-161"><h3>YCUT-161</h3><p>Heavy-duty plasma cutting system.</p></div>
+      <div class="product"><img src="https://5.imimg.com/data5/SELLER/Default/2023/1/WT/AX/NG/30311813/great-yuva-cut-201-500x500.jpg" alt="YCUT-201"><h3>YCUT-201</h3><p>200A high capacity plasma machine.</p></div>
+      </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 Welding Machine Dealer. All rights reserved.
+</footer>
+
+<!-- Script -->
+<script>
+  function toggleSidebar(){
+    const sb=document.getElementById('sidebar'), ov=document.getElementById('overlay');
+    if(sb.style.left==='0px'){ sb.style.left='-250px'; ov.style.display='none'; }
+    else{ sb.style.left='0px'; ov.style.display='block'; }
+  }
+  function closeSidebar(){
+    document.getElementById('sidebar').style.left='-250px';
+    document.getElementById('overlay').style.display='none';
+  }
+</script>
+
+</body>
+</html>

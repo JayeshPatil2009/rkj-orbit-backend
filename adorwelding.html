@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ador Welding Machines</title>
+  <style>
+    body { font-family:'Segoe UI',sans-serif; margin:0; background:#f5f9ff; color:#222; }
+    header { background:#003366; color:#fff; padding:1rem; display:flex; align-items:center; }
+    .menu-icon { font-size:1.5rem; cursor:pointer; margin-right:1rem; }
+    .site-title { font-size:1.5rem; }
+    .sidebar { position:fixed; top:0; left:-250px; width:250px; height:100%; background:#0055aa; color:#fff; padding-top:3rem; transition:.3s; z-index:1000; }
+    .sidebar a { display:block; padding:1rem 2rem; color:#fff; text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.1); }
+    .sidebar a:hover { background:#003f80; }
+    .overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.3); z-index:900; display:none; }
+    .section { padding:2rem; }
+    .category { margin-bottom:3rem; }
+    .category h2 { color:#003366; border-bottom:3px solid #003366; display:inline-block; padding-bottom:5px; margin-bottom:1.5rem; border-radius:5px; }
+    .products { display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:flex-start; }
+    .product { background:#fff; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.08); padding:15px; width:250px; text-align:center; transition:.3s; }
+    .product:hover { transform:translateY(-5px); }
+    .product img { width:100%; height:180px; object-fit:contain; border-radius:8px; background:white; }
+    .product h3 { font-size:18px; color:#004aad; margin:10px 0 5px; }
+    .product p { font-size:14px; color:#333; }
+    footer { background:#003366; color:#fff; text-align:center; padding:1rem; border-top-left-radius:30px; border-top-right-radius:30px; margin-top:4rem; }
+    @media(max-width:768px){ .products{flex-direction:column; align-items:center; } }
+  </style>
+</head>
+<body>
+
+<div class="sidebar" id="sidebar">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  
+  <a href="contact.html">Contact</a>
+</div>
+<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+<header>
+  <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+  <div class="site-title">Ador Welding Machines</div>
+</header>
+
+<div class="section">
+
+  <!-- Welding Machines -->
+  <div class="category">
+    <h2>Welding Machines</h2>
+    <div class="products">
+
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/12/476710567/EE/DW/MP/236239950/thyroluxe-401-mma-welding-machine-500x500.png" alt="Thyroluxe 401">
+        <h3>Thyroluxe 401</h3><p>Thyristor-based DC MMA welding system.</p>
+      </div>
+      <div class="product">
+        <img src="https://5.imimg.com/data5/TM/WH/MY-10550425/600-amp-welding-machine-500x500.jpg" alt="Thyroluxe 600">
+        <h3>Thyroluxe 600</h3><p>600A thyristor heavy-duty MMA machine.</p>
+      </div>
+      <div class="product">
+        <img src="https://adorwelding.com/wp-content/uploads/2024/11/CHAMP-ARC-201-1.png" alt="CHAMP ARC 201">
+        <h3>CHAMP ARC 201</h3><p>Compact digital TIG/MMA inverter system.</p>
+      </div>
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2021/8/II/UY/PB/2151463/ador-champ-pulse-500-multiprocess-pulsed-mig-welder-500x500.png" alt="CHAMP PULSE 500">
+        <h3>CHAMP PULSE 500</h3><p>IGBT-controlled MIG with pulse feature.</p>
+      </div>
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/12/470817329/YJ/TW/HF/75336779/ador-welding-250-a-three-phase-mig-welding-machine-champ-mig-250-500x500.jpg" alt="CHAMP MIG 250">
+        <h3>CHAMP MIG 250</h3><p>250A inverter GMAW unit for fabrication.</p>
+      </div>
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/12/476693990/VC/IH/AF/236239950/ador-champmig-400-500x500.png" alt="CHAMP MIG 400">
+        <h3>CHAMP MIG 400</h3><p>400A MIG with digital panel control.</p>
+      </div>
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/1/376554902/JX/GI/JJ/2151463/ador-champ-600-welding-machine-500x500.jpg" alt="CHAMP MIG 600">
+        <h3>CHAMP MIG 600</h3><p>600A MIG welder for heavy fabrication.</p>
+      </div>
+      <div class="product">
+        <img src="https://static1.industrybuying.com/products/welding/welding-machine/arc-welding-machine/WEL.ARC.29818171_1687178206080.webp" alt="CHAMP 1200">
+        <h3>CHAMP 1200</h3><p>1200A gouging + MMA system for carbon arc.</p>
+      </div>
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/1/376548883/HS/TC/UJ/2151463/ador-welding-champ-mig-600-500x500.jpg" alt="CHAMP 600">
+        <h3>CHAMP 600</h3><p>600A IGBT MMA welder with multiprocess.</p>
+      </div>
+      <div class="product">
+        <img src="https://adorwelding.com/wp-content/uploads/2024/11/CHAMP-600-5.1-1.png" alt="CHAMP 500">
+        <h3>CHAMP 500</h3><p>500A variant of CHAMP MMA series.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Accessories -->
+  <div class="category">
+    <h2>Accessories & Feeders</h2>
+    <div class="products">
+
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/5/421747696/WC/CU/PE/6690679/ador-mig-welding-machine-500x500.jpg" alt="MTG 400 (E)">
+        <h3>ADOR MTG 400 (E)</h3><p>400A MIG torch, ergonomic & efficient.</p>
+      </div>
+      <div class="product">
+        <img src="https://5.imimg.com/data5/RC/VI/AZ/SELLER-39626517/ador-mig-welding-machine-500x500.jpg" alt="MTG 250 (E)">
+        <h3>ADOR MTG 250 (E)</h3><p>MIG torch for CHAMP MIG 250 setups.</p>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/41HZB+uIbWL._UF1000,1000_QL80_FMwebp_.jpg" alt="FEEDLITE 40">
+        <h3>FEEDLITE 40 (NEMRC)</h3><p>4-roll wire feeder for MIG welding.</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer>&copy; 2025 Welding Machine Dealer. All rights reserved.</footer>
+
+<script>
+  function toggleSidebar(){
+    const sb=document.getElementById('sidebar'), ov=document.getElementById('overlay');
+    if(sb.style.left==='0px'){ sb.style.left='-250px'; ov.style.display='none'; }
+    else{ sb.style.left='0px'; ov.style.display='block'; }
+  }
+  function closeSidebar(){
+    document.getElementById('sidebar').style.left='-250px';
+    document.getElementById('overlay').style.display='none';
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Panasonic Welding Machines</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f5f9ff; color: #222; }
+    header { background: #003366; color: white; padding: 1rem; display: flex; align-items: center; }
+    .menu-icon { font-size: 1.5rem; cursor: pointer; margin-right: 1rem; }
+    .site-title { font-size: 1.5rem; }
+    .sidebar { position: fixed; top: 0; left: -250px; width: 250px; height: 100%; background: #0055aa; color: white; padding-top: 3rem; transition: 0.3s ease; z-index: 1000; }
+    .sidebar a { display: block; padding: 1rem 2rem; color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .sidebar a:hover { background-color: #003f80; }
+    .overlay { position: fixed; top: 0; left: 0; height: 100%; width: 100%; background-color: rgba(0,0,0,0.3); z-index: 900; display: none; }
+    .section { padding: 2rem; }
+    .category { margin-bottom: 3rem; }
+    .category h2 { color: #003366; border-bottom: 3px solid #003366; display: inline-block; padding-bottom: 5px; margin-bottom: 1.5rem; border-radius: 5px; }
+    .products { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: flex-start; }
+    .product { background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); padding: 15px; width: 250px; transition: 0.3s; text-align: center; }
+    .product:hover { transform: translateY(-5px); }
+    .product img { width: 100%; height: 180px; object-fit: contain; border-radius: 8px; background: white; }
+    .product h3 { font-size: 18px; color: #004aad; margin: 10px 0 5px; }
+    .product p { font-size: 14px; color: #333; }
+    footer { background: #003366; color: white; text-align: center; padding: 1rem; border-top-left-radius: 30px; border-top-right-radius: 30px; margin-top: 4rem; }
+    @media(max-width: 768px) { .products { flex-direction: column; align-items: center; } }
+  </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  
+  <a href="contact.html">Contact</a>
+</div>
+<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+<!-- Header -->
+<header>
+  <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+  <div class="site-title">Panasonic Welding Machines</div>
+</header>
+
+<!-- Main Section -->
+<div class="section">
+  <div class="category">
+    <h2>Welding Machines</h2>
+    <div class="products">
+
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/2/IV/PX/NC/33928739/yd-400ry1-high-rise-pic-500x500.png" alt="YD-400RY1DJK">
+        <h3>YD‑400RY1DJK / DJF</h3>
+        <p>400A IGBT inverter CO₂/MAG welder with soft/hard arc modes.</p>
+      </div>
+
+      <div class="product">
+        <img src="https://5.imimg.com/data5/NS/UQ/MY-66946869/inverter-400-at3-djr-arc-welding-machine-500x500.jpg" alt="YD-400AT3DJT">
+        <h3>YD‑400AT3DJT</h3>
+        <p>Digital TIG/MMA inverter with anti-shock, hot start & arc force.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="category">
+    <h2>Accessories</h2>
+    <div class="products">
+
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/2/390770368/QT/TH/JG/142079462/wire-feeders-500x500.jpg" alt="YW-40KB3DAL">
+        <h3>YW‑40KB3DAL</h3>
+        <p>High-speed Panasonic wire feeder for MIG/MAG welders.</p>
+      </div>
+
+      <div class="product">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2021/5/UR/KZ/UA/82025512/panasonic-mig-co2-welding-torch-500x500.jpg" alt="YT-40CS4DAF">
+        <h3>YT‑40CS4DAF</h3>
+        <p>MIG torch compatible with Panasonic welding systems.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 Welding Machine Dealer. All rights reserved.
+</footer>
+
+<!-- Script -->
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    if (sidebar.style.left === '0px') {
+      sidebar.style.left = '-250px';
+      overlay.style.display = 'none';
+    } else {
+      sidebar.style.left = '0px';
+      overlay.style.display = 'block';
+    }
+  }
+  function closeSidebar() {
+    document.getElementById('sidebar').style.left = '-250px';
+    document.getElementById('overlay').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
